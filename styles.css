@@ -21,35 +21,11 @@ header {
 header h1 {
     font-size: 48px;
     margin-bottom: 10px;
-    animation: fadeInDown 1s ease-out;
 }
 
 header p {
     font-size: 24px;
     margin: 0;
-    animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 section {
@@ -74,7 +50,6 @@ h2 {
     margin: 15px;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
 }
 
 .gallery img {
@@ -100,3 +75,4 @@ footer {
 footer p {
     margin: 0;
 }
+
