@@ -7,19 +7,31 @@ body {
 }
 
 header {
+    height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image1.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 200px 0;
-    margin-bottom: 50px;
     position: relative;
+    overflow: hidden;
+}
+
+.parallax {
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    position: relative;
+    text-align: center;
     z-index: 2;
 }
 
@@ -76,7 +88,7 @@ header p {
 }
 
 section {
-    margin: 60px;
+    margin: 80px 60px;
     text-align: center;
 }
 
@@ -133,6 +145,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
