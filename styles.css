@@ -95,6 +95,20 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.reviews {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.reviews .review {
+    margin-bottom: 20px;
+}
+
+.reviews .stars {
+    color: gold;
+    font-size: 24px;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -105,6 +119,7 @@ footer {
 footer p {
     margin: 0;
 }
+
 
 
 
