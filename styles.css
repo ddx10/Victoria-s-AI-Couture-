@@ -1,3 +1,6 @@
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -6,9 +9,10 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image1.png') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/header-image.png') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     position: relative;
@@ -18,13 +22,10 @@ header {
 .parallax {
     height: 100%;
     width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
+    padding-bottom: 50px;
 }
 
 .header-content {
@@ -87,6 +88,31 @@ header p {
     }
 }
 
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #c5a880;
+}
+
+/* Secciones */
 section {
     margin: 80px 60px;
     text-align: center;
@@ -120,6 +146,17 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+.video {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.video video {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
 .reviews {
     background-color: #fff;
     padding: 40px;
@@ -135,6 +172,71 @@ h2 {
     font-size: 24px;
 }
 
+.newsletter {
+    background-color: #f8f8f8;
+    padding: 40px;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    background-color: #c5a880;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background-color: #b08968;
+}
+
+.social-media {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.social-media .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media .social-icons a {
+    margin: 0 10px;
+}
+
+.social-media .social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-media .social-icons img:hover {
+    transform: scale(1.2);
+}
+
+.about-us {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin: 60px 0;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: #fff;
@@ -145,7 +247,5 @@ footer {
 footer p {
     margin: 0;
 }
-
-
 
 
