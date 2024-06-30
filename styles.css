@@ -14,36 +14,27 @@ header {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 .parallax {
+    background: url('images/header-image.png') no-repeat center center/cover;
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 50px;
-    position: relative;
-}
-
-header::before {
-    content: "";
-    background: url('images/header-image.png') no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
     z-index: -1;
-    transform: translateZ(-1px) scale(2);
-    transform-origin: center;
 }
 
 .header-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
     z-index: 2;
     color: #fff;
 }
