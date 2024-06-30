@@ -8,6 +8,8 @@
     <meta name="author" content="Victoria's AI Couture">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
     <title>Victoria's AI Couture Collection</title>
 </head>
 <body>
@@ -25,44 +27,41 @@
     </header>
     <main>
         <section class="app-download">
-    <h2>Get the App</h2>
-    <p>Download our app for exclusive fashion insights and updates</p>
-    <div class="app-download-container">
-        <div class="app-links">
-            <a href="https://apps.apple.com" class="cta-button">Download on the App Store</a>
-            <a href="https://play.google.com" class="cta-button">Get it on Google Play</a>
-        </div>
-        <div class="qr-codes">
-            <div class="qr-code">
-                <img src="images/qr-app-store.png" alt="Download on the App Store">
-                <p>App Store</p>
+            <h2>Get the App</h2>
+            <p>Download our app for exclusive fashion insights and updates</p>
+            <div class="app-download-container">
+                <div class="app-links">
+                    <a href="https://apps.apple.com" class="cta-button">Download on the App Store</a>
+                    <a href="https://play.google.com" class="cta-button">Get it on Google Play</a>
+                </div>
+                <div class="qr-codes">
+                    <div class="qr-code">
+                        <img src="images/qr-app-store.png" alt="Download on the App Store">
+                        <p>App Store</p>
+                    </div>
+                    <div class="qr-code">
+                        <img src="images/qr-google-play.png" alt="Get it on Google Play">
+                        <p>Google Play</p>
+                    </div>
+                </div>
             </div>
-            <div class="qr-code">
-                <img src="images/qr-google-play.png" alt="Get it on Google Play">
-                <p>Google Play</p>
-            </div>
-        </div>
-    </div>
-
-
-        
         </section>
         <section id="campaign" class="campaign">
             <h2>In Campaign</h2>
             <div class="gallery">
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model1.gltf')">
                     <img src="images/image1.png" alt="A fusion of futuristic sophistication">
                     <p class="caption">A fusion of futuristic sophistication</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model2.gltf')">
                     <img src="images/image2.png" alt="A touch of futuristic elegance">
                     <p class="caption">A touch of futuristic elegance</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model3.gltf')">
                     <img src="images/image3.png" alt="Exclusive design and innovation">
                     <p class="caption">Exclusive design and innovation</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model4.gltf')">
                     <img src="images/image4.png" alt="Elegance meets modern technology">
                     <p class="caption">Elegance meets modern technology</p>
                 </div>
@@ -71,19 +70,19 @@
         <section id="process" class="process">
             <h2>In Process</h2>
             <div class="gallery">
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model5.gltf')">
                     <img src="images/image5.png" alt="Cutting-edge fashion in the making">
                     <p class="caption">Cutting-edge fashion in the making</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model6.gltf')">
                     <img src="images/image6.png" alt="Innovative designs coming soon">
                     <p class="caption">Innovative designs coming soon</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model7.gltf')">
                     <img src="images/image7.png" alt="Future trends in fashion">
                     <p class="caption">Future trends in fashion</p>
                 </div>
-                <div class="gallery-item">
+                <div class="gallery-item" onclick="openAR('models/model8.gltf')">
                     <img src="images/image8.png" alt="Avant-garde style in progress">
                     <p class="caption">Avant-garde style in progress</p>
                 </div>
@@ -162,7 +161,14 @@
     <footer>
         <p>&copy; 2024 Victoria's AI Couture. All rights reserved.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        function openAR(modelPath) {
+            let tempLink = document.createElement('a');
+            tempLink.href = `ar.html?model=${modelPath}`;
+            tempLink.target = '_blank';
+            tempLink.click();
+        }
+    </script>
 </body>
 </html>
 
