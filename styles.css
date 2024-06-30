@@ -7,9 +7,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    scroll-behavior: smooth;
 }
 
-/* Header */
 header {
     height: 100vh;
     position: relative;
@@ -91,7 +91,6 @@ header p {
     }
 }
 
-/* Secciones */
 section {
     margin: 80px 60px;
     text-align: center;
@@ -115,6 +114,7 @@ h2 {
     margin: 15px;
     max-width: 300px;
     text-align: center;
+    animation: fadeIn 1s ease-out;
 }
 
 .gallery-item img {
@@ -226,7 +226,48 @@ h2 {
     margin: 60px 0;
 }
 
-/* Footer */
+.contact {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact input,
+.contact textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.contact button {
+    padding: 10px 20px;
+    background-color: #c5a880;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.contact button:hover {
+    background-color: #b08968;
+}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -236,6 +277,59 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Diseño Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 36px;
+    }
+    
+    header p {
+        font-size: 20px;
+    }
+    
+    .cta-button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+    
+    section {
+        margin: 40px 20px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    .gallery-item {
+        max-width: 100%;
+        margin: 10px;
+    }
+    
+    .video {
+        padding: 20px;
+    }
+    
+    .reviews, .newsletter, .social-media, .about-us, .contact {
+        padding: 20px;
+        margin: 40px 0;
+    }
+    
+    .contact form {
+        max-width: 100%;
+    }
 }
 
 
