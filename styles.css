@@ -37,6 +37,7 @@ header {
     padding: 20px;
     z-index: 2;
     color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 header h1 {
@@ -56,17 +57,19 @@ header p {
 .cta-button {
     display: inline-block;
     margin-top: 20px;
-    padding: 10px 30px;
+    padding: 15px 40px;
     background-color: #c5a880;
     color: #fff;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    font-size: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
     background-color: #b08968;
+    transform: scale(1.05);
 }
 
 @keyframes fadeInDown {
@@ -335,6 +338,7 @@ footer p {
         max-width: 100%;
     }
 }
+
 
 
 
