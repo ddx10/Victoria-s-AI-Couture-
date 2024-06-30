@@ -736,7 +736,8 @@ footer p {
     height: 24px;
     border-radius: 50%;
     margin-right: 10px;
-    flex-shrink: 0; /* Asegura que la imagen no se estire */
+    flex-shrink: 0; /* Asegura que la imagen no se estire 
+     object-fit: cover;
 }
 
 .popup.show {
