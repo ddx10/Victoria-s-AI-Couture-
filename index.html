@@ -1,88 +1,167 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/image1.png') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.parallax {
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-out;
+}
+
+header p {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    margin: 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: #c5a880;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b08968;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #c5a880;
+}
+
+section {
+    margin: 80px 60px;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.gallery img {
+    margin: 15px;
+    max-width: 300px;
+    height: auto;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.video {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.video video {
+    max-width: 100%;
+    border-radius: 10pxVamos a reiniciar y crear una página web desde cero, con un diseño moderno y elegante, que incluya pestañas para diferentes categorías de productos, moviendo el título del encabezado hacia abajo para que se vea bien la cara de Victoria, y añadiendo otros elementos modernos.
+
+### Código HTML Completo
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <title>Victoria's AI Couture Collection</title>
-</head>
-<body>
-    <header>
-        <div class="parallax">
-            <div class="header-content">
-                <h1>Experience the Elegance of AI Fashion by Victoria</h1>
-                <p>Exclusive Fashion from the Future</p>
-                <a href="#campaign" class="cta-button">Discover More</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <section id="campaign" class="campaign">
-            <h2>In Campaign</h2>
-            <div class="gallery">
-                <img src="images/image1.png" alt="A fusion of futuristic sophistication">
-                <img src="images/image2.png" alt="A touch of futuristic elegance">
-                <img src="images/image3.png" alt="Exclusive design and innovation">
-                <img src="images/image4.png" alt="Elegance meets modern technology">
-            </div>
-        </section>
-        <section id="process" class="process">
-            <h2>In Process</h2>
-            <div class="gallery">
-                <img src="images/image5.png" alt="Cutting-edge fashion in the making">
-                <img src="images/image6.png" alt="Innovative designs coming soon">
-                <img src="images/image7.png" alt="Future trends in fashion">
-                <img src="images/image8.png" alt="Avant-garde style in progress">
-            </div>
-        </section>
-        <section class="video">
-            <h2>Watch Our Latest Collection</h2>
-            <video controls>
-                <source src="videos/collection.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </section>
-        <section class="reviews">
-            <h2>Customer Reviews</h2>
-            <div class="review">
-                <p>"Absolutely stunning! The future of fashion is here."</p>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="review">
-                <p>"Incredible quality and design. Highly recommended!"</p>
-                <div class="stars">★★★★★</div>
-            </div>
-            <div class="review">
-                <p>"A blend of elegance and technology. Simply marvelous."</p>
-                <div class="stars">★★★★☆</div>
-            </div>
-        </section>
-        <section class="newsletter">
-            <h2>Subscribe to Our Newsletter</h2>
-            <form>
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </section>
-        <section class="social-media">
-            <h2>Follow Us</h2>
-            <div class="social-icons">
-                <a href="#"><img src="images/facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="images/instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="images/twitter-icon.png" alt="Twitter"></a>
-            </div>
-        </section>
-        <section class="about-us">
-            <h2>About Us</h2>
-            <p>Victoria's AI Couture combines advanced artificial intelligence with the latest fashion trends to create stunning, futuristic designs. Our mission is to revolutionize the fashion industry by blending technology and style.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Victoria's AI Couture. All rights reserved.</p>
-    </footer>
-</body>
-</html>
-
+    <link href="https
 
 
