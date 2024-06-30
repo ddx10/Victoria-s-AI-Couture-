@@ -354,16 +354,8 @@ footer p {
 }
 
 /* Estilos para los pop-ups */
+/* Estilos para los pop-ups */
 .popup {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    box-shadow: 0 
-    .popup {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -395,6 +387,79 @@ footer p {
 .popup.show {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Estilos para la sección de descarga de la app */
+.app-download {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 60px 30px;
+}
+
+.app-download h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.app-download p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.app-download-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.app-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.qr-codes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.qr-code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #c5a880;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #b08968;
+    transform: scale(1.05);
 }
 
 /* Diseño Responsivo */
@@ -450,7 +515,22 @@ footer p {
     .social-media {
         padding: 10px;
     }
+
+    .app-download-container {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .qr-code img {
+        width: 80px;
+        height: 80px;
+    }
 }
+
 
 
 
