@@ -12,28 +12,31 @@ body {
 /* Header */
 header {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/header-image.png') no-repeat center center/cover;
-    color: #fff;
-    text-align: center;
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
 
 .parallax {
+    background: url('images/header-image.png') no-repeat center center/cover;
     height: 100%;
     width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding-bottom: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
 .header-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    text-align: center;
     z-index: 2;
+    color: #fff;
 }
 
 header h1 {
@@ -108,18 +111,29 @@ h2 {
     padding: 20px;
 }
 
-.gallery img {
+.gallery-item {
     margin: 15px;
     max-width: 300px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
     height: auto;
     border: 3px solid #ccc;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery img:hover {
+.gallery-item:hover img {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
 }
 
 .video {
@@ -223,5 +237,4 @@ footer {
 footer p {
     margin: 0;
 }
-
 
