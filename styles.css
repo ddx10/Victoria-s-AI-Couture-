@@ -143,17 +143,6 @@ h2 {
     color: #666;
 }
 
-.video {
-    background-color: #fff;
-    padding: 40px;
-}
-
-.video video {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
 .reviews {
     background-color: #fff;
     padding: 40px;
@@ -214,16 +203,14 @@ h2 {
 }
 
 .social-media .social-icons a {
-    margin: 0 10px;
+    margin: 0 15px;
+    color: #333;
+    font-size: 40px;
+    transition: color 0.3s, transform 0.3s;
 }
 
-.social-media .social-icons img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.social-media .social-icons img:hover {
+.social-media .social-icons a:hover {
+    color: #c5a880;
     transform: scale(1.2);
 }
 
@@ -231,6 +218,38 @@ h2 {
     background-color: #f4f4f4;
     padding: 40px;
     margin: 60px 0;
+}
+
+.faq {
+    background-color: #fff;
+    padding: 40px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #f8f8f8;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 18px;
 }
 
 .contact {
@@ -325,13 +344,12 @@ footer p {
         margin: 10px;
     }
     
-    .video {
-        padding: 20px;
+    .faq-question {
+        font-size: 20px;
     }
     
-    .reviews, .newsletter, .social-media, .about-us, .contact {
-        padding: 20px;
-        margin: 40px 0;
+    .faq-answer {
+        font-size: 16px;
     }
     
     .contact form {
