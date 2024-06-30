@@ -136,6 +136,7 @@ h2 {
     max-width: 250px;
     text-align: center;
     animation: fadeIn 1s ease-out;
+    cursor: pointer;
 }
 
 .gallery-item img {
@@ -373,8 +374,10 @@ footer p {
 }
 
 .popup img {
-    width: 24px;
-    height: 24px;
+    width: 24px !important;
+    height: 24px !important;
+    max-width: 24px;
+    max-height: 24px;
     border-radius: 50%;
     margin-right: 10px;
     flex-shrink: 0;
