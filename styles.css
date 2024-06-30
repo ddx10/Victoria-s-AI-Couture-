@@ -354,7 +354,6 @@ footer p {
 }
 
 /* Estilos para los pop-ups */
-/* Estilos para los pop-ups */
 .popup {
     position: fixed;
     bottom: 20px;
@@ -374,10 +373,8 @@ footer p {
 }
 
 .popup img {
-    width: 24px !important;
-    height: 24px !important;
-    max-width: 24px;
-    max-height: 24px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     margin-right: 10px;
     flex-shrink: 0;
