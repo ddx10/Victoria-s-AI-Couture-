@@ -19,6 +19,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const img = document.createElement('img');
         img.src = imgSrc;
+        img.onerror = function() {
+            console.error(`Error loading image: ${imgSrc}`);
+        };
 
         const text = document.createElement('span');
         text.textContent = message;
