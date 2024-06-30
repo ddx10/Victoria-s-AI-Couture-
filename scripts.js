@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
     const messages = [
-        { text: "Someone purchased this product!", img: "images/image1.jpg" },
-        { text: "Someone liked this product!", img: "images/image5.jpg" },
-        { text: "This item is trending now!", img: "images/image6.jpg" },
-        { text: "Hurry, only a few left in stock!", img: "images/image2.jpg" }
+        "Someone purchased this product!",
+        "Someone liked this product!",
+        "This item is trending now!",
+        "Hurry, only a few left in stock!"
     ];
 
-    function createPopup(message) {
+    function createPopup(message, imgSrc) {
         const popup = document.createElement('div');
         popup.className = 'popup';
 
         const img = document.createElement('img');
-        img.src = message.img;
+        img.src = imgSrc;
 
         const text = document.createElement('span');
-        text.textContent = message.text;
+        text.textContent = message;
 
         popup.appendChild(img);
         popup.appendChild(text);
@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showRandomPopup() {
+        const allImages = document.querySelectorAll('.gallery-item img');
+        const randomImage = allImages[Math.floor(Math.random() * allImages.length)];
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
-        createPopup(randomMessage);
+        createPopup(randomMessage, randomImage.src);
     }
 
     setInterval(showRandomPopup, 20000);
