@@ -118,6 +118,7 @@ h2 {
 }
 
 .gallery-item {
+    position: relative;
     margin: 15px;
     max-width: 300px;
     text-align: center;
@@ -135,6 +136,23 @@ h2 {
 .gallery-item:hover img {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.overlay-message {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.gallery-item:hover .overlay-message {
+    opacity: 1;
 }
 
 .caption {
@@ -193,7 +211,7 @@ h2 {
 
 .social-media {
     background-color: #fff;
-    padding: 40px;
+    padding: 20px;
 }
 
 .social-media .social-icons {
@@ -210,8 +228,8 @@ h2 {
 }
 
 .social-media .social-icons img {
-    width: 40px; /* Ajusta el tamaño de las imágenes de los íconos */
-    height: 40px;
+    width: 30px; /* Ajusta el tamaño de las imágenes de los íconos */
+    height: 30px;
 }
 
 .social-media .social-icons a:hover {
