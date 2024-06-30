@@ -214,14 +214,16 @@ h2 {
 }
 
 .social-media .social-icons a {
-    margin: 0 15px;
-    color: #333;
-    font-size: 40px;
-    transition: color 0.3s, transform 0.3s;
+    margin: 0 10px;
 }
 
-.social-media .social-icons a:hover {
-    color: #c5a880;
+.social-media .social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-media .social-icons img:hover {
     transform: scale(1.2);
 }
 
@@ -336,7 +338,5 @@ footer p {
         max-width: 100%;
     }
 }
-
-
 
 
