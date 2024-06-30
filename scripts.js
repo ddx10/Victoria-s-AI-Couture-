@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     const messages = [
-        { text: "Someone purchased this product!", img: "images/user1.jpg" },
-        { text: "Someone liked this product!", img: "images/user2.jpg" },
-        { text: "This item is trending now!", img: "images/user3.jpg" },
-        { text: "Hurry, only a few left in stock!", img: "images/user4.jpg" }
+        { text: "Someone purchased this product!", img: "images/image1.jpg" },
+        { text: "Someone liked this product!", img: "images/image5.jpg" },
+        { text: "This item is trending now!", img: "images/image6.jpg" },
+        { text: "Hurry, only a few left in stock!", img: "images/image2.jpg" }
     ];
 
     function createPopup(message) {
