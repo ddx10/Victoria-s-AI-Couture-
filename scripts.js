@@ -1,17 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const galleryItems = document.querySelectorAll('.gallery-item');
+    const messages = [
+        "Someone purchased this product!",
+        "Someone liked this product!",
+        "This item is trending now!",
+        "Hurry, only a few left in stock!"
+    ];
 
-    galleryItems.forEach(item => {
-        const img = item.querySelector('img');
-        const overlayMessage = item.querySelector('.overlay-message');
-        
-        img.addEventListener('mouseenter', () => {
-            overlayMessage.style.opacity = '1';
-        });
+    function createPopup(message) {
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.textContent = message;
+        document.body.appendChild(popup);
+        setTimeout(() => {
+            popup.classList.add('show');
+        }, 100);
+        setTimeout(() => {
+            popup.classList.remove('show');
+            setTimeout(() => {
+                document.body.removeChild(popup);
+            }, 500);
+        }, 5000);
+    }
 
-        img.addEventListener('mouseleave', () => {
-            overlayMessage.style.opacity = '0';
-        });
-    });
+    function showRandomPopup() {
+        const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+        createPopup(randomMessage);
+    }
+
+    setInterval(showRandomPopup, 20000);
 });
-
