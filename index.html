@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Victoria's AI Couture combines advanced artificial intelligence with the latest fashion trends to create stunning, futuristic designs.">
+    <meta name="keywords" content="AI fashion, futuristic fashion, Victoria's AI Couture, fashion trends">
+    <meta name="author" content="Victoria's AI Couture">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Victoria's AI Couture Collection</title>
@@ -10,9 +13,6 @@
 <body>
     <header>
         <div class="parallax">
-            <video autoplay muted loop id="bg-video">
-                <source src="videos/background-video.mp4" type="video/mp4">
-            </video>
             <div class="header-content">
                 <h1>Experience the Elegance of AI Fashion by Victoria</h1>
                 <p>Exclusive Fashion from the Future</p>
@@ -23,20 +23,44 @@
     <main>
         <section id="campaign" class="campaign">
             <h2>In Campaign</h2>
-            <div class="carousel">
-                <div class="carousel-item"><img src="images/image1.png" alt="A fusion of futuristic sophistication"></div>
-                <div class="carousel-item"><img src="images/image2.png" alt="A touch of futuristic elegance"></div>
-                <div class="carousel-item"><img src="images/image3.png" alt="Exclusive design and innovation"></div>
-                <div class="carousel-item"><img src="images/image4.png" alt="Elegance meets modern technology"></div>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/image1.png" alt="A fusion of futuristic sophistication">
+                    <p class="caption">A fusion of futuristic sophistication</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image2.png" alt="A touch of futuristic elegance">
+                    <p class="caption">A touch of futuristic elegance</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image3.png" alt="Exclusive design and innovation">
+                    <p class="caption">Exclusive design and innovation</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image4.png" alt="Elegance meets modern technology">
+                    <p class="caption">Elegance meets modern technology</p>
+                </div>
             </div>
         </section>
         <section id="process" class="process">
             <h2>In Process</h2>
             <div class="gallery">
-                <img src="images/image5.png" alt="Cutting-edge fashion in the making">
-                <img src="images/image6.png" alt="Innovative designs coming soon">
-                <img src="images/image7.png" alt="Future trends in fashion">
-                <img src="images/image8.png" alt="Avant-garde style in progress">
+                <div class="gallery-item">
+                    <img src="images/image5.png" alt="Cutting-edge fashion in the making">
+                    <p class="caption">Cutting-edge fashion in the making</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image6.png" alt="Innovative designs coming soon">
+                    <p class="caption">Innovative designs coming soon</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image7.png" alt="Future trends in fashion">
+                    <p class="caption">Future trends in fashion</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/image8.png" alt="Avant-garde style in progress">
+                    <p class="caption">Avant-garde style in progress</p>
+                </div>
             </div>
         </section>
         <section class="video">
@@ -80,10 +104,24 @@
             <h2>About Us</h2>
             <p>Victoria's AI Couture combines advanced artificial intelligence with the latest fashion trends to create stunning, futuristic designs. Our mission is to revolutionize the fashion industry by blending technology and style.</p>
         </section>
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Victoria's AI Couture. All rights reserved.</p>
     </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
+
 
