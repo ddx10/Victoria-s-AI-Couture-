@@ -734,6 +734,8 @@ footer p {
 .popup img {
     width: 24px !important;
     height: 24px !important;
+     max-width: 24px; /* Asegura que la imagen no crezca más allá de este tamaño */
+    max-height: 24px; /* Asegura que la imagen no crezca más allá de este tamaño */
     border-radius: 50%;
     margin-right: 10px;
     flex-shrink: 0;
