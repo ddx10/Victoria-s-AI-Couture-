@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const imagePaths = [
-        "https://via.placeholder.com/24", // Imagen pequeña de prueba
-        "https://via.placeholder.com/24", // Imagen pequeña de prueba
-        "https://via.placeholder.com/24", // Imagen pequeña de prueba
-        "https://via.placeholder.com/24"  // Imagen pequeña de prueba
+        "images/image1.png", // Reemplaza con las rutas de tus imágenes reales
+        "images/image2.png", 
+        "images/image3.png", 
+        "images/image4.png" 
     ];
 
     function createPopup(message, imgSrc) {
@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function () {
         createPopup(randomMessage, randomImage);
     }
 
-    setInterval(showRandomPopup, 20000);
+    setInterval(showRandomPopup, 20000); // Mostrar pop-up cada 20 segundos
 });
 
