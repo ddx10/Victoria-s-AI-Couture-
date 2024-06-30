@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const imagePaths = [
-        "images/image1.png",
-        "images/image2.png",
-        "images/image3.png",
-        "images/image4.png"
+        "https://via.placeholder.com/24", // Imagen pequeña de prueba
+        "https://via.placeholder.com/24", // Imagen pequeña de prueba
+        "https://via.placeholder.com/24", // Imagen pequeña de prueba
+        "https://via.placeholder.com/24"  // Imagen pequeña de prueba
     ];
 
     function createPopup(message, imgSrc) {
@@ -51,3 +51,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(showRandomPopup, 20000);
 });
+
