@@ -282,12 +282,15 @@ h2 {
 .faq-question:hover {
     background-color: #f8f8f8;
 }
-
 .faq-answer {
     display: none;
     padding: 10px;
     border-top: 1px solid #ccc;
     font-size: 16px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
 }
 
 .contact {
