@@ -7,10 +7,14 @@ document.addEventListener('DOMContentLoaded', function () {
     ];
 
     const imagePaths = [
-        "images/image1.png", // Reemplaza con las rutas de tus imágenes reales
-        "images/image2.png", 
-        "images/image3.png", 
-        "images/image4.png" 
+        "images/image1.png",
+        "images/image2.png",
+        "images/image3.png",
+        "images/image4.png",
+        "images/image5.png",
+        "images/image6.png",
+        "images/image7.png",
+        "images/image8.png"
     ];
 
     function createPopup(message, imgSrc) {
@@ -49,6 +53,22 @@ document.addEventListener('DOMContentLoaded', function () {
         createPopup(randomMessage, randomImage);
     }
 
-    setInterval(showRandomPopup, 20000); // Mostrar pop-up cada 20 segundos
+    setInterval(showRandomPopup, 20000);
+
+    // AR Integration
+    function openAR(modelPath) {
+        let tempLink = document.createElement('a');
+        tempLink.href = `ar.html?model=${modelPath}`;
+        tempLink.target = '_blank';
+        tempLink.click();
+    }
+
+    // Adding event listeners to gallery items for AR
+    document.querySelectorAll('.gallery-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const modelPath = this.getAttribute('data-model');
+            openAR(modelPath);
+        });
+    });
 });
 
