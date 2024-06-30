@@ -732,12 +732,12 @@ footer p {
 }
 
 .popup img {
-    width: 16px; /* Tamaño de imagen recomendado para pop-ups modernos */
-    height: 16px;
+    width: 24px !important;
+    height: 24px !important;
     border-radius: 50%;
     margin-right: 10px;
-    flex-shrink: 0; /* Asegura que la imagen no se estire 
-     object-fit: cover;
+    flex-shrink: 0;
+    object-fit: cover;
 }
 
 .popup.show {
