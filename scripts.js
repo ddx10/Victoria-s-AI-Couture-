@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showRandomPopup() {
-        const allImages = document.querySelectorAll('.gallery-item img');
+        const allImages = document.querySelectorAll('.images');
         const randomImage = allImages[Math.floor(Math.random() * allImages.length)];
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         createPopup(randomMessage, randomImage.src);
