@@ -5,7 +5,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #f8f9fa, #e0e0e0);
     color: #333;
     scroll-behavior: smooth;
 }
@@ -94,6 +94,10 @@ header p {
 section {
     margin: 80px 60px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
 }
 
 h2 {
@@ -331,5 +335,7 @@ footer p {
         max-width: 100%;
     }
 }
+
+
 
 
