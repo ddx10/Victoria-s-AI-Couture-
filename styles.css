@@ -282,6 +282,7 @@ h2 {
 .faq-question:hover {
     background-color: #f8f8f8;
 }
+
 .faq-answer {
     display: none;
     padding: 10px;
@@ -357,6 +358,7 @@ footer p {
     }
 }
 
+/* Estilos para los pop-ups */
 /* Estilos para los pop-ups */
 .popup {
     position: fixed;
@@ -534,6 +536,11 @@ footer p {
     }
 }
 
-
-
+/* Estilos para el contenedor 3D */
+#3d-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin-top: 20px;
+}
 
