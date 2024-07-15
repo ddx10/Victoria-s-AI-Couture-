@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(showRandomPopup, 20000);
 
     // Inicializar la escena 3D
-    function init3D() {
-        let scene, camera, renderer, cube;
+    function init3D(modelPath) {
+        let scene, camera, renderer, model;
 
         // Crear la escena
         scene = new THREE.Scene();
@@ -67,21 +67,32 @@ document.addEventListener('DOMContentLoaded', function () {
         camera.position.z = 5;
 
         // Crear el renderizador
-        renderer = new THREE.WebGLRenderer();
+        renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
         document.getElementById('3d-container').appendChild(renderer.domElement);
 
-        // Crear el cubo
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
+        // Añadir luz
+        const light = new THREE.AmbientLight(0x404040);
+        scene.add(light);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+        directionalLight.position.set(1, 1, 1).normalize();
+        scene.add(directionalLight);
 
-        // Animar el cubo
+        // Cargar el modelo GLTF
+        const loader = new THREE.GLTFLoader();
+        loader.load(modelPath, function (gltf) {
+            model = gltf.scene;
+            scene.add(model);
+        }, undefined, function (error) {
+            console.error(error);
+        });
+
+        // Animar el modelo
         function animate() {
             requestAnimationFrame(animate);
-            cube.rotation.x += 0.01;
-            cube.rotation.y += 0.01;
+            if (model) {
+                model.rotation.y += 0.01;
+            }
             renderer.render(scene, camera);
         }
 
@@ -95,12 +106,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    init3D();
-
-    // Agregar listeners a los elementos de la galería para mostrar el contenedor 3D
+    // Agregar listeners a los elementos de la galería para mostrar el contenedor 3D con el modelo correspondiente
     document.querySelectorAll('.gallery-item').forEach(item => {
         item.addEventListener('click', function() {
+            const modelPath = this.getAttribute('data-model');
             document.getElementById('3d-container').scrollIntoView({ behavior: 'smooth' });
+            init3D(modelPath);
         });
     });
 });
